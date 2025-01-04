@@ -1,13 +1,9 @@
 {
   "name": "first-app",
   "version": "1.0.0",
-  "homepage": "https://KhalkarYash.github.io/NamasteReact",
   "description": "First React App",
-
   "scripts": {
-    "test": "jest",
-    "build": "npm parcel index.html",
-    "deploy": "gh-pages -d dist"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
