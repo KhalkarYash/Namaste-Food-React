@@ -2,6 +2,7 @@
   "name": "first-app",
   "version": "1.0.0",
   "description": "First React App",
+  "main": "App.js",
   "scripts": {
     "test": "jest"
   },
@@ -22,5 +23,8 @@
   "devDependencies": {
     "parcel": "^2.13.3",
     "process": "^0.11.10"
-  }
+  },
+  "browsersList":[
+    "last 2 version"
+  ]
 }
