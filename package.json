@@ -1,0 +1,27 @@
+{
+  "name": "first-app",
+  "version": "1.0.0",
+  "description": "First React App",
+
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhalkarYash/NamasteReact.git"
+  },
+  "author": "Yash Khalkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KhalkarYash/NamasteReact/issues"
+  },
+  "homepage": "https://github.com/KhalkarYash/NamasteReact#readme",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  }
+}
