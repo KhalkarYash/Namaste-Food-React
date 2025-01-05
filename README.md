@@ -2,7 +2,7 @@
 
 ## Description
 
-NamasteReact is a simple React project aimed at helping beginners understand the basics of React.js. The project demonstrates component-based development using React and showcases how to create a functional application with basic styling.
+Learning React
 
 ## Installation
 
