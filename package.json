@@ -6,7 +6,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url ./",
     "test": "jest"
   },
   "repository": {
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/KhalkarYash/NamasteReact/issues"
   },
-  "homepage": "https://khalkaryash.github.io/NamasteReact/",
+  "homepage": "https://khalkaryash.github.io/NamasteReact",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
