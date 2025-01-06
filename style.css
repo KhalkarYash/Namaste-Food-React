@@ -126,6 +126,39 @@
     margin-top: 1rem;
 }
 
-#resDataCuisines{
+#resDataCuisines {
     text-align: center;
+}
+
+.restaurantNameInput {
+    width: 40vw;
+    font-size: 1rem;
+    padding: 5px;
+    border: 0;
+}
+
+.restaurantNameInput:focus {
+    outline: none;
+}
+
+.searchBtn {
+    background-color: transparent;
+    color: var(--primary);
+    font-size: 1rem;
+    padding: 5px;
+    border: 0;
+}
+
+.searchDiv {
+    padding: .5rem;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }

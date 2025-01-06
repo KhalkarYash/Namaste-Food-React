@@ -1530,7 +1530,16 @@ const RestaurantCard = (props) => {
 };
 
 const Search = () => {
-  return <div></div>;
+  return (
+    <div className="searchDiv">
+      <input
+        type="search"
+        placeholder="Search for restaurants"
+        className="restaurantNameInput"
+      />
+      <button className="searchBtn"><i class="fa-solid fa-trash-can"></i></button>
+    </div>
+  );
 };
 
 const Body = () => {
