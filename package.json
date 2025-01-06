@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "First React App",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/KhalkarYash/NamasteReact/issues"
   },
-  "homepage": "https://github.com/KhalkarYash/NamasteReact#readme",
+  "homepage": "https://khalkaryash.github.io/NamasteReact/",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
