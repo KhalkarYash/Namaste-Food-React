@@ -1,3 +1,100 @@
-#heading{
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #FF6F00;
+    --secondary: #ff0000;
+}
+
+.header {
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 5px 10px 5px 10px;
+    /* border: 1px solid black; */
+}
+
+.logo-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-container {
+    height: 8vh;
+    width: 4rem;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: white;
+    justify-content: center;
+}
+
+.logoName {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-style: italic; */
+    font-size: 2.5rem;
+}
+
+.logo {
+    font-size: 2.3rem;
+    text-decoration: none;
+    margin: auto;
+}
+
+.nav-items {
+    padding: 0px 20px;
+
+    ul {
+        list-style: none;
+        display: flex;
+
+        li {
+            padding: 10px;
+            margin: 10px;
+        }
+    }
+}
+
+.search {
+    padding: 10px;
+}
+
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+.res-card {
+    margin: 5px;
+    width: 200px;
+    height: 300px;
+    padding: 5px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.res-card:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 15px rgba(128, 128, 128, 0.582);
+}
+
+.res-logo {
+    width: 100%;
+    border-radius: 10px;
+    /* margin: 5px; */
+}
+
+.footer {
+    height: 6vh;
+    background-color: var(--primary);
 }
