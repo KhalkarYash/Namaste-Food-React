@@ -118,6 +118,8 @@
 .footer {
     height: 6vh;
     background-color: var(--primary);
+    position: static;
+    bottom: 0;
 }
 
 .resDataContainer {
@@ -161,4 +163,10 @@
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+}
+
+.filterBtn{
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px;
 }
