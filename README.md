@@ -1,4 +1,4 @@
-# NamasteReact
+# Namaste React
 
 ## Description
 
