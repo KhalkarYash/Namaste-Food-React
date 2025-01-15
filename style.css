@@ -67,6 +67,12 @@
     padding: 10px;
 }
 
+.shimmerSearch{
+    width: 40vw;
+    height: 6vh;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
 .restaurant-container {
     display: flex;
     flex-wrap: wrap;
@@ -78,12 +84,14 @@
 .res-card {
     background-color: rgb(252, 252, 252);
     margin: 10px;
-    width: 350px;
-    height: 371px;
-    padding: 5px;
+    width: 273px;
+    height: 253px;
+    /* padding: 5px; */
     /* border: 1px solid black; */
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 10px rgba(128, 128, 128, 0.2);
 
     h3 {
         text-align: center;
@@ -91,21 +99,31 @@
 
     h4 {
         color: grey;
+        text-align: center;
         size: 0;
     }
 }
 
 .resName {
+    width: 100%;
     font-size: 1.3rem;
+    position: absolute;
+    bottom: 80;
+    color: white;
+    text-shadow: 0 0 10px black;
 }
 
 .resData {
     font-size: .8rem;
+
+    .ratingBG {
+        background-color: green;
+    }
 }
 
 .res-card:hover {
     cursor: pointer;
-    box-shadow: 0 10px 15px rgba(128, 128, 128, 0.582);
+    box-shadow: 0 5px 10px rgba(128, 128, 128, 0.5);
 }
 
 .res-logo {
@@ -165,8 +183,42 @@
     margin-top: 1rem;
 }
 
-.filterBtn{
+.filterBtn {
     cursor: pointer;
     padding: 5px;
     margin: 10px;
+    width: 10vw;
+    height: 4vh;
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    .shimmer-card {
+        width: 273px;
+        height: 253px;
+        border-radius: 20px;
+        background-color: rgba(128, 128, 128, 0.2);
+        margin: 10px;
+    }
+}
+
+.btnShimmer{
+    padding: 5px;
+    margin: 10px;
+    width: 10vw;
+    height: 4vh;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.ratingColor{
+    border-radius: 5px;
+    padding: 3px;
+    h4{
+        color: white;
+    }
 }
