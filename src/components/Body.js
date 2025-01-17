@@ -15,7 +15,7 @@ const Body = () => {
 
   const fetchdata = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.94727972810446&lng=73.83016818516963&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.9974533&lng=73.78980229999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
     setListOfRestaurants(
@@ -29,24 +29,17 @@ const Body = () => {
   //   return resList;
   // });
 
-  if (listOfRestaurants.length === 0) {
-    return (
-      <div>
-        <div className="search">
+  return listOfRestaurants.length === 0 ? (
+    <div>
+      <div className="searchShimmer">
         <div className="shimmerSearch"></div>
       </div>
-      <div className="filter">
+      <div className="filterShimmer">
         <div className="btnShimmer"></div>
       </div>
-        <Shimmer />
-        <Shimmer />
-        <Shimmer />
-        <Shimmer />
-      </div>
-    );
-  }
-
-  return (
+      <Shimmer />
+    </div>
+  ) : (
     <div className="body">
       <div className="search">
         <Search />
