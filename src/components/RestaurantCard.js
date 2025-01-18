@@ -34,7 +34,7 @@ const RestaurantCard = (props) => {
         <h4 className="resData">|</h4>
         <h4 className="resData">{costForTwo}</h4>
         <h4 className="resData">|</h4>
-        <h4 className="resData">{sla?.deliveryTime} mins</h4>
+        <h4 className="resData">{sla?.slaString}</h4>
       </div>
     </div>
   );
