@@ -19,4 +19,4 @@ Usage
 To start the development server, run:
 npm start
 
-This will launch the project on http://localhost:3000.
+This will launch the project on http://localhost:1234.
