@@ -31,10 +31,10 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Cart</li>
+          <a href="/"><li>Home</li></a>
+          <a href="/about"><li>About</li></a>
+          <a href="/contact"><li>Contact</li></a>
+          <a href="/cart"><li>Cart</li></a>
           <li>
             <button
               className="loginBtn"
