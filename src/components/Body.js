@@ -1,5 +1,4 @@
 import RestaurantCard from "./RestaurantCard";
-import Search from "./Search";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
@@ -97,7 +96,7 @@ const Body = () => {
 
       <div className="restaurant-container">
         {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} resData={restaurant} />
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
     </div>
