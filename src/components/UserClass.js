@@ -25,6 +25,10 @@ class UserClass extends React.Component {
     // console.log(this.props.name + "Child component did mount")
   }
 
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
+
   render() {
     // console.log(this.props.name + "Child Render");
     const { name, location, avatar_url } = this.state.userInfo;
