@@ -41,7 +41,7 @@ const Body = () => {
   // });
 
   if (onlineStatus === false) {
-    return alert("You are offline!");
+    return <h1>Looks like you are offline! Please check your internet connection</h1>;
   }
 
   return listOfRestaurants.length === 0 ? (
