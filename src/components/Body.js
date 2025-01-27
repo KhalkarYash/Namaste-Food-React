@@ -13,7 +13,6 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    console.log("useEffect() called");
     fetchdata();
   }, []);
 
@@ -57,18 +56,18 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="flex justify-center">
-        <div className="m-4">
+        <div className="m-4 shadow-md">
           <input
             type="search"
             placeholder="Search for restaurants"
-            className="w-[40vw] text-[1rem] p-1 h-full shadow-md"
+            className="w-[40vw] text-[1rem] py-1 px-10 h-full focus:outline-none"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="px-4 py-2 bg-green-100 rounded-lg cursor-pointer"
+            className="px-4 py-2 bg-green-100 cursor-pointer"
             onClick={() => {
               // Filter the restaurant cards and update the UI
               console.log(searchText);
@@ -88,7 +87,7 @@ const Body = () => {
         </div>
         <div className="p-4 flex items-center">
           <button
-            className="px-4 py-2 bg-gray-100 rounded-lg cursor-pointer"
+            className="px-4 py-2 bg-gray-100 cursor-pointer shadow-blue-200 shadow-md"
             onClick={() => {
               const filteredListOfRestaurants = listOfRestaurants.filter(
                 (res) => res.info.avgRating > 4.5

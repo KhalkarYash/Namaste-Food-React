@@ -2,7 +2,7 @@ import ShimmerCard from "./ShimmerCard";
 
 const Shimmer = () => {
   return (
-    <div className="flex flex-wrap justify-center p-[10px]">
+    <div className="flex flex-wrap justify-center align-middle p-[10px]">
       <ShimmerCard />
       <ShimmerCard />
       <ShimmerCard />

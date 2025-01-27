@@ -5,7 +5,6 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   let [btnNameReact, setBtnNameReact] = useState("Login");
-  console.log("Header rendered");
 
   const onlineStatus = useOnlineStatus();
 
@@ -19,10 +18,10 @@ const Header = () => {
   //   console.log("useEffect() called");
   // }, []);
 
-  // If dependency array is [btnNameReact] => called everytime btnNameReact is updated
-  useEffect(() => {
-    console.log("useEffect() called");
-  }, [btnNameReact]);
+  // // If dependency array is [btnNameReact] => called everytime btnNameReact is updated
+  // useEffect(() => {
+  //   console.log("useEffect() called");
+  // }, [btnNameReact]);
 
   return (
     <div className="flex justify-between bg-pink-100 shadow-lg mb-2 p-1 sm:bg-yellow-100 lg:bg-green-100">
