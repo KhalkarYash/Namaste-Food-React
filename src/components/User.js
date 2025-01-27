@@ -15,7 +15,7 @@ const User = ({ name, location }) => {
   }
 
   return (
-    <div className="user-card">
+    <div className="p-[10px] border-1">
       <h1>Count : {count}</h1>
       <h1>Count2 : {count2}</h1>
       <h2>Name : {name}</h2>

@@ -25,35 +25,35 @@ const Header = () => {
   }, [btnNameReact]);
 
   return (
-    <div className="header">
-      <div className="logo-contain">
-        <div className="logo-container">
+    <div className="flex justify-between bg-pink-100 shadow-lg mb-2 p-1 sm:bg-yellow-100 lg:bg-green-100">
+      <div className="flex justify-between items-center p-4">
+        <div className="w-[4rem] h-min rounded-full overflow-hidden">
           {/* <div className="logo">🙏🏻</div> */}
-          <img className="logo" src={LOGO_URL} alt="Namaste Food Logo" />
+          <img className="w-full" src={LOGO_URL} alt="Namaste Food Logo" />
         </div>
-        <div className="logoName">Namaste Food</div>
+        <div className="text-[2.5rem]">Namaste Food</div>
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
+      <div className="flex items-center">
+        <ul className="flex p-4 m-4 list-none justify-center align-middle">
+          <li className="px-4 text-xl">Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
           <Link to="/">
-            <li>Home</li>
+            <li className="px-4 text-xl">Home</li>
           </Link>
           <Link to="/about">
-            <li>About</li>
+            <li className="px-4 text-xl">About</li>
           </Link>
           <Link to="/contact">
-            <li>Contact</li>
+            <li className="px-4 text-xl">Contact</li>
           </Link>
           <Link to="/grocery">
-            <li>Grocery</li>
+            <li className="px-4 text-xl">Grocery</li>
           </Link>
           <Link to="/cart">
-            <li>Cart</li>
+            <li className="px-4 text-xl">Cart</li>
           </Link>
-          <li>
+          <li className="px-4 text-xl">
             <button
-              className="loginBtn"
+              className="cursor-pointer rounded-[10px] px-[10px]"
               onClick={() => {
                 btnNameReact === "Login"
                   ? setBtnNameReact("Logout")
