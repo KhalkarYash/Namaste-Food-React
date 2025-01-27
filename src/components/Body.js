@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withMoreRating } from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -11,6 +11,8 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardPromoted = withMoreRating(RestaurantCard);
 
   useEffect(() => {
     fetchdata();
@@ -40,7 +42,9 @@ const Body = () => {
   // });
 
   if (onlineStatus === false) {
-    return <h1>Looks like you are offline! Please check your internet connection</h1>;
+    return (
+      <h1>Looks like you are offline! Please check your internet connection</h1>
+    );
   }
 
   return listOfRestaurants.length === 0 ? (
@@ -107,7 +111,11 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant.info.avgRating >= 4.5 ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

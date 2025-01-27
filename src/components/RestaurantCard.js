@@ -45,4 +45,18 @@ const RestaurantCard = (props) => {
   );
 };
 
+// Higher Order Component
+// if rating > 4.5 it will be promoted/recommended
+
+export const withMoreRating = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white m-2 p-2 rounded-[5px] z-1">Promoted</label>
+        <RestaurantCard {...props}/>
+      </div>
+    );
+  };
+};
+
 export default RestaurantCard;

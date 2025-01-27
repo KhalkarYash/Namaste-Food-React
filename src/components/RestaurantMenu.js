@@ -51,11 +51,11 @@ const RestaurantMenu = () => {
           <div className="h-[2vh] w-full bg-gray-100"></div>
           {itemCards.map((item, index) => {
             return (
-              <li className="border-b-1 border-gray-200">
-                <div
-                  className="flex justify-between my-10 w-[90%] m-auto"
-                  key={item?.card?.info?.id}
-                >
+              <li
+                className="border-b-1 border-gray-200"
+                key={item?.card?.info?.id}
+              >
+                <div className="flex justify-between my-10 w-[90%] m-auto">
                   <div className="p-5">
                     <div className="text-[1rem]">{item?.card?.info?.name}</div>
                     <div>
