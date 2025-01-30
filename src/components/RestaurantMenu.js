@@ -32,9 +32,6 @@ const RestaurantMenu = () => {
         c?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-  console.log(categories);
-
-  console.log(resInfo);
 
   return (
     <div className="font-bold flex flex-col justify-evenly items-center text-[0.9rem]">
@@ -69,8 +66,8 @@ const RestaurantMenu = () => {
                     <div className="text-[1rem]">{item?.card?.info?.name}</div>
                     <div>
                       ₹{" "}
-                      {item?.card?.info?.defaultPrice / 100 ||
-                        item?.card?.info?.price / 100}
+                      {item?.card?.info?.price / 100 ||
+                        item?.card?.info?.defaultPrice / 100}
                     </div>
                     <div className="text-gray-400 font-normal">
                       {item?.card?.info?.description}
@@ -92,9 +89,9 @@ const RestaurantMenu = () => {
       </div>
 
       {/* Categories accordion */}
-      {categories.map(() => {
-        <RestaurantCategory />
-      })}
+      {categories.map((category) => (
+        <RestaurantCategory data={category?.card?.card}/>
+      ))}
     </div>
   );
 };
