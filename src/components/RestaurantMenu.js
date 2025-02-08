@@ -10,6 +10,10 @@ const RestaurantMenu = () => {
 
   const resInfo = useRestaurantMenu(resId);
 
+  const [showIndex, setShowIndex] = useState(null);
+
+  const dummy = "Dummy Data"
+
   if (resInfo === null) {
     return <Shimmer />;
   }
@@ -24,6 +28,8 @@ const RestaurantMenu = () => {
   } = resInfo?.cards[2]?.card?.card?.info;
 
   const { itemCards } =
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+      ?.card ||
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
   const categories =
@@ -89,8 +95,13 @@ const RestaurantMenu = () => {
       </div>
 
       {/* Categories accordion */}
-      {categories.map((category) => (
-        <RestaurantCategory data={category?.card?.card}/>
+      {categories.map((category, index) => (
+        <RestaurantCategory
+          key={category?.card?.card?.title}
+          data={category?.card?.card}
+          showItems={(index===showIndex)&& true}
+          setShowIndex={() => setShowIndex(index)}
+        />
       ))}
     </div>
   );

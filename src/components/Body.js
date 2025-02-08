@@ -1,8 +1,9 @@
 import RestaurantCard, { withMoreRating } from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
 
 const Body = () => {
   // Local State Variable => Super powerful variable        (Hooks)
@@ -13,6 +14,8 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const RestaurantCardPromoted = withMoreRating(RestaurantCard);
+
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   useEffect(() => {
     fetchdata();
@@ -74,7 +77,6 @@ const Body = () => {
             className="px-4 py-2 bg-green-100 cursor-pointer"
             onClick={() => {
               // Filter the restaurant cards and update the UI
-              console.log(searchText);
 
               const filteredRest = listOfRestaurants.filter((res) => {
                 return res.info.name
@@ -102,6 +104,16 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
+        </div>
+        <div className="p-4 flex items-center">
+          <label>UserName : &nbsp; </label>
+          <input
+            type="text"
+            className="border-0 p-2 outline-none shadow-md shadow-gray-400"
+            placeholder="Enter UserName"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          ></input>
         </div>
       </div>
 
