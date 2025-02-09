@@ -20,3 +20,5 @@ To start the development server, run:
 npm start
 
 This will launch the project on http://localhost:1234.
+
+Use cors chrome extension
