@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KhalkarYash/NamasteReact.git"
+    "url": "git+hhttps://github.com/KhalkarYash/Namaste-Food-React.git"
   },
   "author": "Yash Khalkar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KhalkarYash/NamasteReact/issues"
+    "url": "https://github.com/KhalkarYash/Namaste-Food-React/issues"
   },
-  "homepage": "https://khalkaryash.github.io/NamasteReact",
+  "homepage": "https://khalkaryash.github.io/Namaste-Food-React",
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
     "@tailwindcss/postcss": "^4.0.0",
