@@ -604,6 +604,10 @@
 @layer components;
 
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
+
   .absolute {
     position: absolute;
   }
@@ -626,6 +630,10 @@
 
   .m-\[10px\] {
     margin: 10px;
+  }
+
+  .m-auto {
+    margin: auto;
   }
 
   .mx-10 {
@@ -684,12 +692,12 @@
     width: 25%;
   }
 
-  .w-9\/12 {
-    width: 75%;
+  .w-6\/12 {
+    width: 50%;
   }
 
-  .w-\[40vw\] {
-    width: 40vw;
+  .w-9\/12 {
+    width: 75%;
   }
 
   .w-\[4rem\] {
@@ -708,6 +716,10 @@
     width: 15vw;
   }
 
+  .w-\[40vw\] {
+    width: 40vw;
+  }
+
   .w-\[50vw\] {
     width: 50vw;
   }
@@ -718,6 +730,10 @@
 
   .w-full {
     width: 100%;
+  }
+
+  .transform {
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
 
   .cursor-pointer {
@@ -756,6 +772,14 @@
     overflow: hidden;
   }
 
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+
+  .rounded-\[5px\] {
+    border-radius: 5px;
+  }
+
   .rounded-\[10px\] {
     border-radius: 10px;
   }
@@ -766,10 +790,6 @@
 
   .rounded-\[50\%\] {
     border-radius: 50%;
-  }
-
-  .rounded-\[5px\] {
-    border-radius: 5px;
   }
 
   .rounded-full {
@@ -793,6 +813,11 @@
     border-bottom-left-radius: 20px;
   }
 
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+
   .border-0 {
     border-style: var(--tw-border-style);
     border-width: 0;
@@ -806,6 +831,10 @@
   .border-b-2 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
+  }
+
+  .border-black {
+    border-color: var(--color-black);
   }
 
   .border-gray-200 {
@@ -935,6 +964,16 @@
 
   .align-middle {
     vertical-align: middle;
+  }
+
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
 
   .text-lg {
@@ -1124,6 +1163,36 @@
     animation-timing-function: cubic-bezier(0, 0, .2, 1);
     transform: none;
   }
+}
+
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateX(0);
+}
+
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateY(0);
+}
+
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateZ(0);
+}
+
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewX(0);
+}
+
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewY(0);
 }
 
 @property --tw-border-style {
